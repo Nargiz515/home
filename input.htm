@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="elave()">+</button>
+    <button onclick="sil()">-</button>
+    <ul id="a"></ul>
+    <script>
+        const a = document.getElementById('a');
+        let x = 0;
+        function elave(){
+            x++
+            show()
+        }
+        function sil(){
+            x--
+            show()
+            }
+        function show(){
+            let kod = "";
+            for(let i = 0; i < x; i++){
+                kod += `<li style = 'list-style:none;'><input type="text" value="Nargiz"/></li>`
+            }
+            a.innerHTML = kod;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    let arr = [1, 5, 8, 7, -4, -3, 2, 3, 6];
+    
+    // arr.sort(function(a,b){return a-b}) //artma
+    // arr.sort(function(a,b){return b-a}) //azalma
+    function sortArr(arr) {
+        for (let i = 0; i < arr.length - 1; i++) {
+            for (let j = 0; j < arr.length - 1 - i; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    let ara = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = ara;
+                }
+            }
+        }
+        return arr;
+    }
+
+    console.log(sortArr(arr));
+</script>
+</body>
+</html>
+
